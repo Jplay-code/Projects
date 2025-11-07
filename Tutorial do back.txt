@@ -1,0 +1,15 @@
+Teste somente para o backend (Docker)
+Entre na pasta do backend
+Build da imagem
+docker build -t weather-backend:latest .
+
+
+Saída esperada: build sem erros.
+
+Rodar o container
+docker run --rm -p 8080:8080 --env-file .env.example --name weather-backend weather-backend:latest
+
+
+--rm limpa o container ao parar.
+
+-p 8080:8080 publica a porta do container para o host.
